@@ -1,5 +1,8 @@
 name: CI
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches: [main]
@@ -37,4 +40,3 @@ jobs:
         with:
           name: gnome-tangle-extension
           path: dist/gnome-tangle@suhjae.dev.shell-extension.zip
-
