@@ -1,0 +1,4 @@
+*.shell-extension.zip
+dist/
+schemas/gschemas.compiled
+

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.gnome-tangle" path="/org/gnome/shell/extensions/gnome-tangle/">
+    <key name="gap-size" type="i">
+      <default>0</default>
+      <summary>Window gap size</summary>
+      <description>Pixels to inset target rectangles after calculating a window action.</description>
+    </key>
+    <key name="almost-maximize-padding" type="i">
+      <default>24</default>
+      <summary>Almost maximize padding</summary>
+      <description>Pixels to inset windows for the almost-maximize action.</description>
+    </key>
+    <key name="move-step" type="i">
+      <default>48</default>
+      <summary>Move action step size</summary>
+      <description>Pixels used by move adjustment actions.</description>
+    </key>
+    <key name="resize-step" type="i">
+      <default>96</default>
+      <summary>Resize action step size</summary>
+      <description>Pixels used by larger and smaller resize adjustment actions.</description>
+    </key>
+    <key name="enable-drag-snapping" type="b">
+      <default>true</default>
+      <summary>Enable drag snapping</summary>
+      <description>Enable Rectangle-style edge and corner snapping while dragging windows.</description>
+    </key>
+    <key name="snap-edge-size" type="i">
+      <default>28</default>
+      <summary>Snap edge size</summary>
+      <description>Distance in pixels from an edge that activates side snapping.</description>
+    </key>
+    <key name="snap-corner-size" type="i">
+      <default>96</default>
+      <summary>Snap corner size</summary>
+      <description>Distance in pixels from a corner that activates quarter snapping.</description>
+    </key>
+    <key name="snap-preview-opacity" type="d">
+      <default>0.30</default>
+      <summary>Snap preview opacity</summary>
+      <description>Opacity setting for the snap footprint overlay.</description>
+    </key>
+
+    <key name="shortcut-left-half" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;Left']</default>
+      <summary>Left Half shortcut</summary>
+      <description>Keyboard shortcut for the Left Half window action.</description>
+    </key>
+
+    <key name="shortcut-right-half" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;Right']</default>
+      <summary>Right Half shortcut</summary>
+      <description>Keyboard shortcut for the Right Half window action.</description>
+    </key>
+
+    <key name="shortcut-top-half" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;Up']</default>
+      <summary>Top Half shortcut</summary>
+      <description>Keyboard shortcut for the Top Half window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-half" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;Down']</default>
+      <summary>Bottom Half shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Half window action.</description>
+    </key>
+
+    <key name="shortcut-top-left" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;u']</default>
+      <summary>Top Left shortcut</summary>
+      <description>Keyboard shortcut for the Top Left window action.</description>
+    </key>
+
+    <key name="shortcut-top-right" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;i']</default>
+      <summary>Top Right shortcut</summary>
+      <description>Keyboard shortcut for the Top Right window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;j']</default>
+      <summary>Bottom Left shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;k']</default>
+      <summary>Bottom Right shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right window action.</description>
+    </key>
+
+    <key name="shortcut-first-third" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;d']</default>
+      <summary>First Third shortcut</summary>
+      <description>Keyboard shortcut for the First Third window action.</description>
+    </key>
+
+    <key name="shortcut-center-third" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;f']</default>
+      <summary>Center Third shortcut</summary>
+      <description>Keyboard shortcut for the Center Third window action.</description>
+    </key>
+
+    <key name="shortcut-last-third" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;g']</default>
+      <summary>Last Third shortcut</summary>
+      <description>Keyboard shortcut for the Last Third window action.</description>
+    </key>
+
+    <key name="shortcut-first-two-thirds" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;e']</default>
+      <summary>First Two Thirds shortcut</summary>
+      <description>Keyboard shortcut for the First Two Thirds window action.</description>
+    </key>
+
+    <key name="shortcut-center-two-thirds" type="as">
+      <default>[]</default>
+      <summary>Center Two Thirds shortcut</summary>
+      <description>Keyboard shortcut for the Center Two Thirds window action.</description>
+    </key>
+
+    <key name="shortcut-last-two-thirds" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;t']</default>
+      <summary>Last Two Thirds shortcut</summary>
+      <description>Keyboard shortcut for the Last Two Thirds window action.</description>
+    </key>
+
+    <key name="shortcut-top-third" type="as">
+      <default>[]</default>
+      <summary>Top Third shortcut</summary>
+      <description>Keyboard shortcut for the Top Third window action.</description>
+    </key>
+
+    <key name="shortcut-middle-third" type="as">
+      <default>[]</default>
+      <summary>Middle Third shortcut</summary>
+      <description>Keyboard shortcut for the Middle Third window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-third" type="as">
+      <default>[]</default>
+      <summary>Bottom Third shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Third window action.</description>
+    </key>
+
+    <key name="shortcut-top-two-thirds" type="as">
+      <default>[]</default>
+      <summary>Top Two Thirds shortcut</summary>
+      <description>Keyboard shortcut for the Top Two Thirds window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-two-thirds" type="as">
+      <default>[]</default>
+      <summary>Bottom Two Thirds shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Two Thirds window action.</description>
+    </key>
+
+    <key name="shortcut-first-fourth" type="as">
+      <default>[]</default>
+      <summary>First Fourth shortcut</summary>
+      <description>Keyboard shortcut for the First Fourth window action.</description>
+    </key>
+
+    <key name="shortcut-second-fourth" type="as">
+      <default>[]</default>
+      <summary>Second Fourth shortcut</summary>
+      <description>Keyboard shortcut for the Second Fourth window action.</description>
+    </key>
+
+    <key name="shortcut-third-fourth" type="as">
+      <default>[]</default>
+      <summary>Third Fourth shortcut</summary>
+      <description>Keyboard shortcut for the Third Fourth window action.</description>
+    </key>
+
+    <key name="shortcut-last-fourth" type="as">
+      <default>[]</default>
+      <summary>Last Fourth shortcut</summary>
+      <description>Keyboard shortcut for the Last Fourth window action.</description>
+    </key>
+
+    <key name="shortcut-first-three-fourths" type="as">
+      <default>[]</default>
+      <summary>First Three Fourths shortcut</summary>
+      <description>Keyboard shortcut for the First Three Fourths window action.</description>
+    </key>
+
+    <key name="shortcut-center-three-fourths" type="as">
+      <default>[]</default>
+      <summary>Center Three Fourths shortcut</summary>
+      <description>Keyboard shortcut for the Center Three Fourths window action.</description>
+    </key>
+
+    <key name="shortcut-last-three-fourths" type="as">
+      <default>[]</default>
+      <summary>Last Three Fourths shortcut</summary>
+      <description>Keyboard shortcut for the Last Three Fourths window action.</description>
+    </key>
+
+    <key name="shortcut-top-left-sixth" type="as">
+      <default>[]</default>
+      <summary>Top Left Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Top Left Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-sixth" type="as">
+      <default>[]</default>
+      <summary>Top Center Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-top-right-sixth" type="as">
+      <default>[]</default>
+      <summary>Top Right Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Top Right Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left-sixth" type="as">
+      <default>[]</default>
+      <summary>Bottom Left Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-sixth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right-sixth" type="as">
+      <default>[]</default>
+      <summary>Bottom Right Sixth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right Sixth window action.</description>
+    </key>
+
+    <key name="shortcut-top-left-eighth" type="as">
+      <default>[]</default>
+      <summary>Top Left Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Top Left Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-left-eighth" type="as">
+      <default>[]</default>
+      <summary>Top Center Left Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Left Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-right-eighth" type="as">
+      <default>[]</default>
+      <summary>Top Center Right Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Right Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-top-right-eighth" type="as">
+      <default>[]</default>
+      <summary>Top Right Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Top Right Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left-eighth" type="as">
+      <default>[]</default>
+      <summary>Bottom Left Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-left-eighth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Left Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Left Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-right-eighth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Right Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Right Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right-eighth" type="as">
+      <default>[]</default>
+      <summary>Bottom Right Eighth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right Eighth window action.</description>
+    </key>
+
+    <key name="shortcut-top-left-ninth" type="as">
+      <default>[]</default>
+      <summary>Top Left Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Top Left Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-ninth" type="as">
+      <default>[]</default>
+      <summary>Top Center Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-top-right-ninth" type="as">
+      <default>[]</default>
+      <summary>Top Right Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Top Right Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-left-ninth" type="as">
+      <default>[]</default>
+      <summary>Middle Left Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Left Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-center-ninth" type="as">
+      <default>[]</default>
+      <summary>Middle Center Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Center Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-right-ninth" type="as">
+      <default>[]</default>
+      <summary>Middle Right Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Right Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left-ninth" type="as">
+      <default>[]</default>
+      <summary>Bottom Left Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-ninth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right-ninth" type="as">
+      <default>[]</default>
+      <summary>Bottom Right Ninth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right Ninth window action.</description>
+    </key>
+
+    <key name="shortcut-top-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Top Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Top Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Top Center Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Top Center Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-top-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Top Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Top Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Middle Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-center-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Middle Center Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Center Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-center-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Middle Center Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Center Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-middle-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Middle Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Middle Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Bottom Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-left-twelfth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Left Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Left Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right-twelfth" type="as">
+      <default>[]</default>
+      <summary>Bottom Right Twelfth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right Twelfth window action.</description>
+    </key>
+
+    <key name="shortcut-top-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Top Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Top Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Top Center Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-top-center-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Top Center Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Top Center Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-top-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Top Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Top Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-upper-middle-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Upper Middle Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Upper Middle Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-upper-middle-center-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Upper Middle Center Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Upper Middle Center Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-upper-middle-center-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Upper Middle Center Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Upper Middle Center Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-upper-middle-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Upper Middle Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Upper Middle Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-lower-middle-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Lower Middle Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Lower Middle Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-lower-middle-center-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Lower Middle Center Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Lower Middle Center Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-lower-middle-center-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Lower Middle Center Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Lower Middle Center Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-lower-middle-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Lower Middle Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Lower Middle Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Bottom Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-left-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Left Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Left Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-center-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Bottom Center Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Center Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-bottom-right-sixteenth" type="as">
+      <default>[]</default>
+      <summary>Bottom Right Sixteenth shortcut</summary>
+      <description>Keyboard shortcut for the Bottom Right Sixteenth window action.</description>
+    </key>
+
+    <key name="shortcut-height-half-top" type="as">
+      <default>[]</default>
+      <summary>Height Half Top shortcut</summary>
+      <description>Keyboard shortcut for the Height Half Top window action.</description>
+    </key>
+
+    <key name="shortcut-height-half-bottom" type="as">
+      <default>[]</default>
+      <summary>Height Half Bottom shortcut</summary>
+      <description>Keyboard shortcut for the Height Half Bottom window action.</description>
+    </key>
+
+    <key name="shortcut-height-third-top" type="as">
+      <default>[]</default>
+      <summary>Height Third Top shortcut</summary>
+      <description>Keyboard shortcut for the Height Third Top window action.</description>
+    </key>
+
+    <key name="shortcut-height-third-center" type="as">
+      <default>[]</default>
+      <summary>Height Third Center shortcut</summary>
+      <description>Keyboard shortcut for the Height Third Center window action.</description>
+    </key>
+
+    <key name="shortcut-height-third-bottom" type="as">
+      <default>[]</default>
+      <summary>Height Third Bottom shortcut</summary>
+      <description>Keyboard shortcut for the Height Third Bottom window action.</description>
+    </key>
+
+    <key name="shortcut-maximize" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;Return']</default>
+      <summary>Maximize shortcut</summary>
+      <description>Keyboard shortcut for the Maximize window action.</description>
+    </key>
+
+    <key name="shortcut-maximize-height" type="as">
+      <default>[]</default>
+      <summary>Maximize Height shortcut</summary>
+      <description>Keyboard shortcut for the Maximize Height window action.</description>
+    </key>
+
+    <key name="shortcut-almost-maximize" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;m']</default>
+      <summary>Almost Maximize shortcut</summary>
+      <description>Keyboard shortcut for the Almost Maximize window action.</description>
+    </key>
+
+    <key name="shortcut-center" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;c']</default>
+      <summary>Center shortcut</summary>
+      <description>Keyboard shortcut for the Center window action.</description>
+    </key>
+
+    <key name="shortcut-center-half" type="as">
+      <default>[]</default>
+      <summary>Center Half shortcut</summary>
+      <description>Keyboard shortcut for the Center Half window action.</description>
+    </key>
+
+    <key name="shortcut-larger" type="as">
+      <default>[]</default>
+      <summary>Larger shortcut</summary>
+      <description>Keyboard shortcut for the Larger window action.</description>
+    </key>
+
+    <key name="shortcut-smaller" type="as">
+      <default>[]</default>
+      <summary>Smaller shortcut</summary>
+      <description>Keyboard shortcut for the Smaller window action.</description>
+    </key>
+
+    <key name="shortcut-larger-width" type="as">
+      <default>[]</default>
+      <summary>Larger Width shortcut</summary>
+      <description>Keyboard shortcut for the Larger Width window action.</description>
+    </key>
+
+    <key name="shortcut-smaller-width" type="as">
+      <default>[]</default>
+      <summary>Smaller Width shortcut</summary>
+      <description>Keyboard shortcut for the Smaller Width window action.</description>
+    </key>
+
+    <key name="shortcut-move-left" type="as">
+      <default>[]</default>
+      <summary>Move Left shortcut</summary>
+      <description>Keyboard shortcut for the Move Left window action.</description>
+    </key>
+
+    <key name="shortcut-move-right" type="as">
+      <default>[]</default>
+      <summary>Move Right shortcut</summary>
+      <description>Keyboard shortcut for the Move Right window action.</description>
+    </key>
+
+    <key name="shortcut-move-up" type="as">
+      <default>[]</default>
+      <summary>Move Up shortcut</summary>
+      <description>Keyboard shortcut for the Move Up window action.</description>
+    </key>
+
+    <key name="shortcut-move-down" type="as">
+      <default>[]</default>
+      <summary>Move Down shortcut</summary>
+      <description>Keyboard shortcut for the Move Down window action.</description>
+    </key>
+
+    <key name="shortcut-restore" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;BackSpace']</default>
+      <summary>Restore shortcut</summary>
+      <description>Keyboard shortcut for the Restore window action.</description>
+    </key>
+
+    <key name="shortcut-next-display" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;n']</default>
+      <summary>Next Display shortcut</summary>
+      <description>Keyboard shortcut for the Next Display window action.</description>
+    </key>
+
+    <key name="shortcut-previous-display" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;p']</default>
+      <summary>Previous Display shortcut</summary>
+      <description>Keyboard shortcut for the Previous Display window action.</description>
+    </key>
+
+  </schema>
+</schemalist>

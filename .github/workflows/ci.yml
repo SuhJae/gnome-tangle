@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install GNOME tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gjs libglib2.0-bin gnome-shell
+
+      - name: Regenerate schema
+        run: |
+          gjs -m scripts/generate-schema.js > /tmp/generated-schema.xml
+          diff -u schemas/org.gnome.shell.extensions.gnome-tangle.gschema.xml /tmp/generated-schema.xml
+
+      - name: Validate schema
+        run: glib-compile-schemas --strict schemas
+
+      - name: Run geometry checks
+        run: gjs -m scripts/check-geometry.js
+
+      - name: Package extension
+        run: ./scripts/package.sh
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gnome-tangle-extension
+          path: dist/gnome-tangle@suhjae.dev.shell-extension.zip
+

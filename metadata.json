@@ -1,0 +1,8 @@
+{
+  "uuid": "gnome-tangle@suhjae.dev",
+  "name": "GNOME Tangle",
+  "description": "Rectangle-style window actions for GNOME Shell.",
+  "shell-version": ["46"],
+  "settings-schema": "org.gnome.shell.extensions.gnome-tangle",
+  "url": "https://github.com/rxhanson/Rectangle"
+}

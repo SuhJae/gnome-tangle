@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install GNOME tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gjs libglib2.0-bin gnome-shell
+
+      - name: Package extension
+        run: ./scripts/package.sh
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/gnome-tangle@suhjae.dev.shell-extension.zip
+          generate_release_notes: true
+
