@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+// Copyright (C) 2026 Suhjae
+
 import {rectForAction} from '../lib/geometry.js';
 
 const workArea = {x: 0, y: 32, width: 1920, height: 1048};

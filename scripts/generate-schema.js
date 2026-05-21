@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+// Copyright (C) 2026 Suhjae
+
 import {ACTIONS, shortcutKeyForAction} from '../lib/actions.js';
 
 const defaults = new Map([
