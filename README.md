@@ -2,15 +2,15 @@
 
 Rectangle-style window management for GNOME Shell on Ubuntu.
 
+Inspired by Rectangle for macOS.
+
 GNOME Tangle is a GNOME Shell extension that provides keyboard-driven window
 layouts, drag snap areas, multi-monitor movement, restore history, and
-interactive shortcut configuration. It is inspired by Rectangle for macOS, but
-implemented with GNOME Shell and Mutter APIs.
+interactive shortcut configuration, implemented with GNOME Shell and Mutter APIs.
 
 ## Status
 
-This project is early and private while the core behavior is being refined.
-The extension targets GNOME Shell 46.
+GNOME Tangle currently targets GNOME Shell 46. Testing is focused on Ubuntu 24.04 / GNOME 46.
 
 Implemented:
 
