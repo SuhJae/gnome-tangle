@@ -127,6 +127,32 @@ export default class GnomeTanglePreferences extends ExtensionPreferences {
         settings.bind('resize-step', resizeStepRow, 'value', Gio.SettingsBindFlags.DEFAULT);
         behavior.add(resizeStepRow);
 
+        const throwGroup = new Adw.PreferencesGroup({
+            title: 'Window Throw',
+            description: 'Hold Super+Alt and move the pointer to move the focused window by the same delta.',
+        });
+        page.add(throwGroup);
+
+        const throwEnableRow = new Adw.SwitchRow({
+            title: 'Enable Window Throw',
+            subtitle: 'Move the focused window while Super+Alt is held',
+        });
+        settings.bind('enable-window-throw', throwEnableRow, 'active', Gio.SettingsBindFlags.DEFAULT);
+        throwGroup.add(throwEnableRow);
+
+        const throwIntervalRow = new Adw.SpinRow({
+            title: 'Throw Polling Interval',
+            subtitle: 'Milliseconds between pointer checks while the extension is enabled',
+            adjustment: new Gtk.Adjustment({
+                lower: 8,
+                upper: 64,
+                step_increment: 1,
+                page_increment: 8,
+            }),
+        });
+        settings.bind('window-throw-frame-interval', throwIntervalRow, 'value', Gio.SettingsBindFlags.DEFAULT);
+        throwGroup.add(throwIntervalRow);
+
         return page;
     }
 

@@ -65,9 +65,11 @@ extension UUID or when a previous load failure is cached.
 
 ## Preferences
 
-Preferences are split into four pages:
+Preferences are split into pages and sections:
 
 - Settings: gap, almost-maximize padding, move increment, and resize increment.
+- Window Throw: move the focused window with pointer deltas while holding
+  `Super+Alt`.
 - Shortcuts: grouped actions with click-to-record keybinding buttons.
 - Snap Areas: drag snapping, edge size, corner size, and preview opacity.
 - About: Rectangle asset attribution.
@@ -103,6 +105,14 @@ applies the snap action.
 
 Ubuntu's bundled `tiling-assistant@ubuntu.com` can overlap with this behavior.
 Disable it while testing GNOME Tangle if snap results feel duplicated.
+
+## Window Throw
+
+When Window Throw is enabled, hold `Super+Alt` and move the pointer. The focused
+window follows the same pointer delta until either modifier is released.
+
+This is not a normal shortcut binding because it is activated by holding only
+modifier keys. The behavior is controlled from the Settings page.
 
 ## Build And Validate
 
@@ -164,4 +174,3 @@ https://github.com/rxhanson/Rectangle
 
 Rectangle is licensed under the MIT License. See
 `LICENSES/Rectangle-MIT.txt`.
-

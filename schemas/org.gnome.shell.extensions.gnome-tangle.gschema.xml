@@ -21,6 +21,16 @@
       <summary>Resize action step size</summary>
       <description>Pixels used by larger and smaller resize adjustment actions.</description>
     </key>
+    <key name="enable-window-throw" type="b">
+      <default>true</default>
+      <summary>Enable window throw</summary>
+      <description>Move the focused window with pointer motion while Super and Alt are held.</description>
+    </key>
+    <key name="window-throw-frame-interval" type="i">
+      <default>16</default>
+      <summary>Window throw frame interval</summary>
+      <description>Polling interval in milliseconds for window throw pointer motion.</description>
+    </key>
     <key name="enable-drag-snapping" type="b">
       <default>true</default>
       <summary>Enable drag snapping</summary>

@@ -63,6 +63,16 @@ const heightHalfBottom = rectForAction('height-half-bottom', workArea, {currentR
 if (JSON.stringify(heightHalfBottom) !== JSON.stringify({x: 8, y: 564, width: 944, height: 508}))
     throw new Error(`height-half-bottom failed: ${JSON.stringify(heightHalfBottom)}`);
 
+const heightThirdCenterAfterTop = rectForAction('height-third-center', workArea, {currentRect: heightThirdTop, gap: 8});
+
+if (JSON.stringify(heightThirdCenterAfterTop) !== JSON.stringify({x: 8, y: 389, width: 944, height: 333}))
+    throw new Error(`height-third-center after top failed: ${JSON.stringify(heightThirdCenterAfterTop)}`);
+
+const heightHalfBottomAfterTop = rectForAction('height-half-bottom', workArea, {currentRect: heightThirdTop, gap: 8});
+
+if (JSON.stringify(heightHalfBottomAfterTop) !== JSON.stringify({x: 8, y: 564, width: 944, height: 508}))
+    throw new Error(`height-half-bottom after top failed: ${JSON.stringify(heightHalfBottomAfterTop)}`);
+
 const fullHeight = rectForAction('maximize-height', workArea, {currentRect: leftHalfGapped, gap: 8});
 
 if (JSON.stringify(fullHeight) !== JSON.stringify({x: 8, y: 40, width: 944, height: 1032}))
